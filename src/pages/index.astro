@@ -115,8 +115,8 @@ const steps = [
           <li><a href="#story"   class="text-xs tracking-widest uppercase text-bark-700 font-medium hover:text-bark-900 transition-colors">Our Story</a></li>
           <li><a href="#faq"     class="text-xs tracking-widest uppercase text-bark-700 font-medium hover:text-bark-900 transition-colors">FAQ</a></li>
           <li>
-            <a href="#contact" class="inline-block px-5 py-2 border border-bark-800 text-bark-800 text-xs tracking-widest uppercase font-medium hover:bg-bark-800 hover:text-cream-50 transition-colors">
-              Order
+            <a href="#connect" class="inline-block px-5 py-2 border border-bark-800 text-bark-800 text-xs tracking-widest uppercase font-medium hover:bg-bark-800 hover:text-cream-50 transition-colors">
+              Connect
             </a>
           </li>
         </ul>
@@ -165,7 +165,7 @@ const steps = [
             <a href="#cookies" class="inline-block px-8 py-3 bg-bark-800 text-cream-50 text-xs tracking-widest uppercase font-medium hover:bg-bark-900 transition-colors">
               Browse Cookies
             </a>
-            <a href="#contact" class="inline-block px-8 py-3 border border-bark-800 text-bark-800 text-xs tracking-widest uppercase font-medium hover:bg-bark-800 hover:text-cream-50 transition-colors">
+            <a href="#connect" class="inline-block px-8 py-3 border border-bark-800 text-bark-800 text-xs tracking-widest uppercase font-medium hover:bg-bark-800 hover:text-cream-50 transition-colors">
               How to Order
             </a>
           </div>
@@ -336,6 +336,95 @@ const steps = [
             </div>
           ))}
         </dl>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────────────── -->
+    <!-- CONNECT / CONTACT SECTION                                       -->
+    <!-- ─────────────────────────────────────────────────────────────── -->
+    <section id="connect" class="py-24 bg-cream-50">
+      <div class="max-w-screen-xl mx-auto px-6">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          
+          <div>
+            <p class="text-xs tracking-widest uppercase text-earth-500 font-medium mb-4">Get in Touch</p>
+            <h2 class="font-serif text-4xl md:text-5xl font-light text-bark-900 mb-8">Let's connect.</h2>
+            
+            <div class="space-y-8">
+              <div>
+                <h3 class="text-xs tracking-widest uppercase text-earth-400 font-medium mb-3">Email</h3>
+                <a href="mailto:hello@bakery.mioko.net" class="font-serif text-2xl text-bark-800 hover:text-earth-500 transition-colors">
+                  hello@bakery.mioko.net
+                </a>
+              </div>
+
+              <div>
+                <h3 class="text-xs tracking-widest uppercase text-earth-400 font-medium mb-3">Location</h3>
+                <p class="font-serif text-2xl text-bark-800">
+                  Round Rock, Texas
+                </p>
+                <p class="text-bark-600 text-sm font-light mt-1">Local pickup only — address shared upon confirmation.</p>
+              </div>
+
+              <div>
+                <h3 class="text-xs tracking-widest uppercase text-earth-400 font-medium mb-3">Ordering</h3>
+                <p class="text-bark-700 font-light leading-relaxed">
+                  I bake in small, intentional batches. To place an order, message me on 
+                  <strong>Instagram</strong> or <strong>Telegram</strong>, or send an <strong>email</strong>. 
+                  Typically 3–5 days notice is required.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-cream-100 p-10 md:p-16 rounded-sm border border-cream-200">
+            <p class="text-center text-xs tracking-widest uppercase text-earth-500 font-medium mb-10">Scan to Follow & Order</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+              
+              <!-- Instagram QR -->
+              <div class="flex flex-col items-center group">
+                <a 
+                  href="https://www.instagram.com/mioko.bakery" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="relative block aspect-square w-full max-w-[180px] bg-white p-4 shadow-sm group-hover:shadow-md transition-shadow duration-300"
+                >
+                  <img 
+                    src="/images/mioko.bakery_qr-instagram.png" 
+                    alt="Instagram QR Code" 
+                    class="w-full h-full object-contain"
+                  />
+                  <div class="absolute inset-0 border border-bark-900/5 group-hover:border-earth-400/30 transition-colors"></div>
+                </a>
+                <p class="mt-4 font-serif text-lg text-bark-900 group-hover:text-earth-500 transition-colors">@mioko.bakery</p>
+                <p class="text-[10px] tracking-widest uppercase text-bark-500 mt-1">Instagram</p>
+              </div>
+
+              <!-- Telegram QR -->
+              <div class="flex flex-col items-center group">
+                <a 
+                  href="https://t.me/+gwn4uv3GRi03MThi" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="relative block aspect-square w-full max-w-[180px] bg-white p-4 shadow-sm group-hover:shadow-md transition-shadow duration-300"
+                >
+                  <img 
+                    src="/images/mioko.bakery_qr-telegram.jpg" 
+                    alt="Telegram QR Code" 
+                    class="w-full h-full object-contain"
+                  />
+                  <div class="absolute inset-0 border border-bark-900/5 group-hover:border-earth-400/30 transition-colors"></div>
+                </a>
+                <p class="mt-4 font-serif text-lg text-bark-900 group-hover:text-earth-500 transition-colors">Telegram Group</p>
+                <p class="text-[10px] tracking-widest uppercase text-bark-500 mt-1">Community</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
 
       </div>
     </section>
@@ -345,60 +434,35 @@ const steps = [
   <!-- ─────────────────────────────────────────────────────────────── -->
   <!-- FOOTER / CONTACT                                                -->
   <!-- ─────────────────────────────────────────────────────────────── -->
-  <footer id="contact" class="bg-bark-900 text-cream-100 py-20">
+  <footer class="bg-bark-900 text-cream-100 py-20">
     <div class="max-w-screen-xl mx-auto px-6">
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-
+      <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
         <div>
           <p class="font-serif text-3xl font-light mb-3">Mioko</p>
-          <p class="text-cream-300 text-sm font-light leading-relaxed">
-            Handcrafted organic cookies.<br />
-            Round Rock, Texas.
+          <p class="text-cream-300 text-sm font-light leading-relaxed max-w-xs">
+            Handcrafted organic cookies with European soul, made in small batches in Round Rock, Texas.
           </p>
         </div>
 
-        <div>
-          <p class="text-xs tracking-widest uppercase text-earth-400 font-medium mb-5">Get in Touch</p>
-          <ul class="space-y-3 text-sm font-light">
-            <li>
-              <a href="mailto:hello@bakery.mioko.net" class="text-cream-300 hover:text-cream-50 transition-colors">
-                hello@bakery.mioko.net
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/mioko.bakery" target="_blank" rel="noopener noreferrer" class="text-cream-300 hover:text-cream-50 transition-colors">
-                @mioko.bakery
-              </a>
-            </li>
-            <li>
-              <a href="https://t.me/+gwn4uv3GRi03MThi" target="_blank" rel="noopener noreferrer" class="text-cream-300 hover:text-cream-50 transition-colors">
-                Telegram Group
-              </a>
-            </li>
-            <li class="text-cream-100/40">Round Rock, TX</li>
-          </ul>
-          
-          <div class="flex gap-4 mt-6">
-            <a href="https://www.instagram.com/mioko.bakery" target="_blank" rel="noopener noreferrer">
-              <img src="/images/mioko.bakery_qr-instagram.png" alt="Instagram QR Code" class="w-16 h-16 opacity-80 hover:opacity-100 transition-opacity rounded-sm bg-white" />
-            </a>
-            <a href="https://t.me/+gwn4uv3GRi03MThi" target="_blank" rel="noopener noreferrer">
-              <img src="/images/mioko.bakery_qr-telegram.jpg" alt="Telegram QR Code" class="w-16 h-16 opacity-80 hover:opacity-100 transition-opacity rounded-sm bg-white" />
-            </a>
+        <div class="flex flex-wrap gap-x-12 gap-y-6">
+          <div>
+            <p class="text-xs tracking-widest uppercase text-earth-400 font-medium mb-4">Sitemap</p>
+            <ul class="space-y-2 text-sm font-light text-cream-300">
+              <li><a href="#cookies" class="hover:text-cream-50 transition-colors">Cookies</a></li>
+              <li><a href="#story" class="hover:text-cream-50 transition-colors">Our Story</a></li>
+              <li><a href="#faq" class="hover:text-cream-50 transition-colors">FAQ</a></li>
+              <li><a href="#connect" class="hover:text-cream-50 transition-colors">Connect</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs tracking-widest uppercase text-earth-400 font-medium mb-4">Follow</p>
+            <ul class="space-y-2 text-sm font-light text-cream-300">
+              <li><a href="https://www.instagram.com/mioko.bakery" target="_blank" class="hover:text-cream-50 transition-colors">Instagram</a></li>
+              <li><a href="https://t.me/+gwn4uv3GRi03MThi" target="_blank" class="hover:text-cream-50 transition-colors">Telegram</a></li>
+            </ul>
           </div>
         </div>
-
-        <div>
-          <p class="text-xs tracking-widest uppercase text-earth-400 font-medium mb-5">Ordering</p>
-          <ul class="space-y-2 text-sm font-light text-cream-300">
-            <li>Orders via Instagram, Telegram, or email</li>
-            <li>3–5 days advance notice</li>
-            <li>Local pickup only — Round Rock, TX</li>
-            <li class="pt-2 text-cream-100/30 text-xs">No online store. No delivery. Just good cookies.</li>
-          </ul>
-        </div>
-
       </div>
 
       <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
