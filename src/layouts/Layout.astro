@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 interface Props {
   title: string;
   description?: string;
@@ -6,7 +8,7 @@ interface Props {
 
 const {
   title,
-  description = "Handcrafted organic cookies in Round Rock, TX — less sweet, more intention. Made by a Russian pastry chef using organic ingredients.",
+  description = 'Handcrafted organic cookies in Round Rock, TX — less sweet, more intention.',
 } = Astro.props;
 ---
 

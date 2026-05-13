@@ -13,7 +13,6 @@ export default {
         earth: {
           400: '#C8A882',
           500: '#B8926A',
-          600: '#9A7855',
         },
         bark: {
           700: '#7C6D62',
@@ -23,10 +22,7 @@ export default {
       },
       fontFamily: {
         serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        sans:  ['"Inter"', 'system-ui', 'sans-serif'],
-      },
-      letterSpacing: {
-        widest2: '0.25em',
+        sans:  ['Inter', 'system-ui', 'sans-serif'],
       },
     },
   },
