@@ -146,29 +146,40 @@ const steps = [
 
       <!-- Text block -->
       <div class="bg-cream-50 py-16">
-        <div class="max-w-screen-xl mx-auto px-6">
-          <p class="text-xs tracking-widest uppercase text-earth-500 font-medium mb-5">Round Rock, Texas</p>
+        <div class="max-w-screen-xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          
+          <div>
+            <p class="text-xs tracking-widest uppercase text-earth-500 font-medium mb-5">Round Rock, Texas</p>
 
-          <!-- CANARY: outline-red-500 is a hard-coded Tailwind color — if you see a red outline, Tailwind is loading correctly. Remove the outline classes once confirmed. -->
-          <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-light leading-[1.1] text-bark-900 mb-6 outline outline-4 outline-red-500 inline-block">
-            Handcrafted,<br />
-            <em class="not-italic">Organic</em> Cookies<br />
-            in Round Rock.
-          </h1>
+            <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-light leading-[1.1] text-bark-900 mb-6">
+              Handcrafted,<br />
+              <em class="not-italic">Organic</em> Cookies<br />
+              in Round Rock.
+            </h1>
 
-          <p class="text-bark-700 text-lg font-light leading-relaxed max-w-xl mt-6 mb-10">
-            Inspired by European pastry tradition — where sweetness serves the ingredient,
-            not the other way around. Organic, small-batch, made with care in Round Rock.
-          </p>
+            <p class="text-bark-700 text-lg font-light leading-relaxed max-w-xl mt-6 mb-10">
+              Inspired by European pastry tradition — where sweetness serves the ingredient,
+              not the other way around. Organic, small-batch, made with care in Round Rock.
+            </p>
 
-          <div class="flex flex-wrap gap-4">
-            <a href="#cookies" class="inline-block px-8 py-3 bg-bark-800 text-cream-50 text-xs tracking-widest uppercase font-medium hover:bg-bark-900 transition-colors">
-              Browse Cookies
-            </a>
-            <a href="#connect" class="inline-block px-8 py-3 border border-bark-800 text-bark-800 text-xs tracking-widest uppercase font-medium hover:bg-bark-800 hover:text-cream-50 transition-colors">
-              How to Order
-            </a>
+            <div class="flex flex-wrap gap-4">
+              <a href="#cookies" class="inline-block px-8 py-3 bg-bark-800 text-cream-50 text-xs tracking-widest uppercase font-medium hover:bg-bark-900 transition-colors">
+                Browse Cookies
+              </a>
+              <a href="#connect" class="inline-block px-8 py-3 border border-bark-800 text-bark-800 text-xs tracking-widest uppercase font-medium hover:bg-bark-800 hover:text-cream-50 transition-colors">
+                How to Order
+              </a>
+            </div>
           </div>
+
+          <div class="hidden md:flex justify-end">
+            <img 
+              src="/images/round-rock.png" 
+              alt="Round Rock, Texas" 
+              class="w-full max-w-md h-auto object-contain opacity-90 mix-blend-multiply" 
+            />
+          </div>
+
         </div>
       </div>
 
