@@ -1,0 +1,379 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const cookies = [
+  {
+    name: "Cardamom & Rose Shortbread",
+    description: "Tender butter cookie with ground cardamom and dried rose petals. Barely sweet, deeply fragrant.",
+    image: "/images/cookie-cardamom-rose.jpg",
+  },
+  {
+    name: "Honey Walnut Rounds",
+    description: "Lightly sweetened with raw wildflower honey, packed with toasted walnuts. Rustic and warm.",
+    image: "/images/cookie-honey-walnut.jpg",
+  },
+  {
+    name: "Dark Chocolate Hazelnut",
+    description: "Intense 70% cacao with roasted hazelnuts. Rich, bittersweet, and satisfying without the sugar crash.",
+    image: "/images/cookie-choc-hazelnut.jpg",
+  },
+  {
+    name: "Lemon Poppy Seed",
+    description: "Bright, zesty butter cookie with a tender crumb. Fresh lemon zest, a handful of poppy seeds.",
+    image: "/images/cookie-lemon-poppy.jpg",
+  },
+  {
+    name: "Earl Grey & Lavender",
+    description: "Fragrant and floral, inspired by Russian afternoon tea. Subtle tannins, gentle sweetness.",
+    image: "/images/cookie-earl-grey.jpg",
+  },
+  {
+    name: "Buckwheat & Sea Salt",
+    description: "Earthy, nutty buckwheat flour with a finish of fleur de sel. Unexpected, unforgettable.",
+    image: "/images/cookie-buckwheat.jpg",
+  },
+];
+
+const faqs = [
+  {
+    q: "Are all ingredients organic?",
+    a: "Yes. I use certified organic flour, butter, eggs, and sweeteners. Specialty add-ins like chocolate and nuts are sustainably sourced from small producers.",
+  },
+  {
+    q: "How do I place an order?",
+    a: "Message me on Instagram or send an email. I'll confirm flavor availability, batch size, and arrange a pickup time.",
+  },
+  {
+    q: "How far in advance should I order?",
+    a: "3–5 days for standard orders. For holidays or custom boxes, please reach out 1–2 weeks ahead. I bake in small, intentional batches.",
+  },
+  {
+    q: "Where is pickup?",
+    a: "Round Rock, TX. I'll share the exact address once your order is confirmed.",
+  },
+  {
+    q: "Can I request custom flavors or gift packaging?",
+    a: "Absolutely. Custom seasonal flavors, curated gift boxes, and ribbon-wrapped tins are all available — just ask.",
+  },
+];
+---
+
+<Layout title="Mioko Bakery — Handcrafted Organic Cookies in Round Rock, TX">
+
+  <!-- ── NAV ─────────────────────────────────────────────────────── -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-cream-50/90 backdrop-blur-sm border-b border-cream-200">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="font-serif text-xl font-medium tracking-wide text-bark-900">
+        Mioko
+      </a>
+      <ul class="hidden md:flex items-center gap-8 text-xs tracking-widest2 uppercase text-bark-700 font-medium">
+        <li><a href="#cookies" class="hover:text-bark-900 transition-colors">Cookies</a></li>
+        <li><a href="#story"   class="hover:text-bark-900 transition-colors">Our Story</a></li>
+        <li><a href="#faq"     class="hover:text-bark-900 transition-colors">FAQ</a></li>
+        <li>
+          <a href="#contact"
+             class="px-5 py-2 border border-bark-800 text-bark-800 hover:bg-bark-800 hover:text-cream-50 transition-colors text-xs tracking-widest2 uppercase">
+            Order
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ── HERO ──────────────────────────────────────────────────── -->
+    <section class="relative min-h-screen flex flex-col">
+
+      <!-- Hero image -->
+      <div class="relative flex-1 min-h-[70vh] bg-cream-200 overflow-hidden">
+        <img
+          src="/images/hero.jpg"
+          alt="Handcrafted organic cookies arranged on a linen cloth"
+          class="w-full h-full object-cover absolute inset-0"
+          onerror="this.style.display='none'"
+        />
+        <!-- Placeholder shown when image not yet added -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center bg-cream-200 text-bark-700 pointer-events-none select-none">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="opacity-30 mb-3">
+            <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="22" cy="26" r="4" fill="currentColor" opacity=".4"/>
+            <circle cx="38" cy="22" r="3" fill="currentColor" opacity=".4"/>
+            <circle cx="42" cy="36" r="4" fill="currentColor" opacity=".4"/>
+            <circle cx="26" cy="40" r="3" fill="currentColor" opacity=".4"/>
+            <circle cx="34" cy="34" r="2" fill="currentColor" opacity=".3"/>
+          </svg>
+          <span class="text-xs tracking-widest2 uppercase opacity-40">hero.jpg — replace with your photo</span>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-cream-50/60"></div>
+      </div>
+
+      <!-- Hero text -->
+      <div class="max-w-6xl mx-auto px-6 pt-16 pb-24 w-full">
+        <div class="max-w-2xl">
+          <p class="text-xs tracking-widest2 uppercase text-earth-500 mb-5 font-medium">Round Rock, Texas</p>
+          <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-light leading-[1.1] text-bark-900 mb-6">
+            Handcrafted,<br />
+            <em class="font-normal not-italic">Organic</em> Cookies<br />
+            in Round Rock.
+          </h1>
+          <p class="text-bark-700 text-lg font-light leading-relaxed max-w-lg mb-10">
+            Inspired by European pastry tradition — where sweetness serves the ingredient,
+            not the other way around. Organic, small-batch, and made with care.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#cookies"
+               class="px-8 py-3.5 bg-bark-800 text-cream-50 text-xs tracking-widest2 uppercase font-medium hover:bg-bark-900 transition-colors">
+              Browse Cookies
+            </a>
+            <a href="#contact"
+               class="px-8 py-3.5 border border-bark-800 text-bark-800 text-xs tracking-widest2 uppercase font-medium hover:bg-bark-800 hover:text-cream-50 transition-colors">
+              How to Order
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PHILOSOPHY STRIP ──────────────────────────────────────── -->
+    <section class="bg-cream-200 py-12">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          {[
+            { label: "Organic Ingredients", body: "Every batch starts with certified organic flour, butter, and eggs." },
+            { label: "Less Sweet, More Flavor", body: "Sugar lifts the other flavors — it doesn't drown them." },
+            { label: "Small Batch, Local",  body: "Made in Round Rock, picked up in Round Rock. No shipping needed." },
+          ].map(item => (
+            <div class="py-4">
+              <p class="text-xs tracking-widest2 uppercase text-earth-500 font-medium mb-2">{item.label}</p>
+              <p class="text-bark-700 font-light leading-relaxed text-sm">{item.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ── COOKIES GALLERY ───────────────────────────────────────── -->
+    <section id="cookies" class="py-24 max-w-6xl mx-auto px-6">
+      <div class="mb-16 text-center">
+        <p class="text-xs tracking-widest2 uppercase text-earth-500 font-medium mb-4">The Collection</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-light text-bark-900">Meet the Cookies</h2>
+        <div class="mx-auto mt-5 w-12 h-px bg-earth-400"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {cookies.map((cookie) => (
+          <article class="group">
+            <div class="relative aspect-square bg-cream-200 overflow-hidden mb-5">
+              <img
+                src={cookie.image}
+                alt={cookie.name}
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                onerror="this.style.display='none'"
+              />
+              <!-- placeholder -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center text-bark-700 pointer-events-none select-none">
+                <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="opacity-20 mb-2">
+                  <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="22" cy="26" r="4" fill="currentColor" opacity=".5"/>
+                  <circle cx="40" cy="22" r="3" fill="currentColor" opacity=".5"/>
+                  <circle cx="42" cy="38" r="4" fill="currentColor" opacity=".5"/>
+                  <circle cx="24" cy="40" r="3" fill="currentColor" opacity=".5"/>
+                </svg>
+                <span class="text-[10px] tracking-wider uppercase opacity-25">photo</span>
+              </div>
+            </div>
+            <h3 class="font-serif text-xl font-medium text-bark-900 mb-2">{cookie.name}</h3>
+            <p class="text-bark-700 text-sm font-light leading-relaxed">{cookie.description}</p>
+          </article>
+        ))}
+      </div>
+
+      <p class="text-center mt-14 text-bark-700 text-sm font-light">
+        Seasonal flavors rotate throughout the year.{" "}
+        <a href="#contact" class="text-earth-500 underline underline-offset-4 hover:text-earth-600 transition-colors">
+          Ask about what's available this week.
+        </a>
+      </p>
+    </section>
+
+    <!-- ── HOW IT WORKS ──────────────────────────────────────────── -->
+    <section class="bg-cream-100 py-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="mb-16 text-center">
+          <p class="text-xs tracking-widest2 uppercase text-earth-500 font-medium mb-4">Simple Process</p>
+          <h2 class="font-serif text-4xl md:text-5xl font-light text-bark-900">How to Order</h2>
+          <div class="mx-auto mt-5 w-12 h-px bg-earth-400"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 relative">
+          <!-- Connector line (desktop only) -->
+          <div class="hidden md:block absolute top-8 left-1/3 right-1/3 h-px bg-earth-400/40"></div>
+
+          {[
+            {
+              step: "01",
+              title: "Browse the Collection",
+              body: "Explore the cookie flavors here. Seasonal availability changes weekly — check Instagram for the latest batch.",
+            },
+            {
+              step: "02",
+              title: "Send a Message",
+              body: "DM on Instagram or email directly. Share which flavors you'd like and how many. I'll confirm and give you a pickup window.",
+            },
+            {
+              step: "03",
+              title: "Local Pickup, Round Rock",
+              body: "Pick up your order fresh from my home bakery in Round Rock, TX. No delivery fees, no waiting on a courier.",
+            },
+          ].map((item) => (
+            <div class="text-center flex flex-col items-center">
+              <span class="font-serif text-4xl font-light text-earth-400 mb-5">{item.step}</span>
+              <h3 class="font-serif text-xl font-medium text-bark-900 mb-3">{item.title}</h3>
+              <p class="text-bark-700 text-sm font-light leading-relaxed max-w-xs">{item.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ── THE STORY ─────────────────────────────────────────────── -->
+    <section id="story" class="py-24 max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Image -->
+        <div class="relative aspect-[4/5] bg-cream-200 overflow-hidden order-2 lg:order-1">
+          <img
+            src="/images/about.jpg"
+            alt="Mioko baking in her kitchen"
+            class="w-full h-full object-cover"
+            onerror="this.style.display='none'"
+          />
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-bark-700 pointer-events-none select-none">
+            <svg width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="opacity-20 mb-2">
+              <rect x="8" y="8" width="48" height="48" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="32" cy="28" r="8" stroke="currentColor" stroke-width="1.5" opacity=".6"/>
+              <path d="M8 44 Q20 36 32 40 Q44 44 56 38" stroke="currentColor" stroke-width="1.5" fill="none" opacity=".4"/>
+            </svg>
+            <span class="text-[10px] tracking-wider uppercase opacity-25">about.jpg — replace with your photo</span>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="order-1 lg:order-2">
+          <p class="text-xs tracking-widest2 uppercase text-earth-500 font-medium mb-5">Our Story</p>
+          <h2 class="font-serif text-4xl md:text-5xl font-light text-bark-900 leading-tight mb-8">
+            A Russian Kitchen,<br />
+            <em>Now in Texas.</em>
+          </h2>
+          <div class="space-y-5 text-bark-700 font-light leading-relaxed">
+            <p>
+              I grew up watching my grandmother bake. Not measuring, not following recipes — just
+              knowing. She believed that good pastry should taste of its ingredients, not of sugar.
+              A walnut cookie should taste like walnut. A honey shortbread should taste like honey.
+            </p>
+            <p>
+              When my husband and I moved to Round Rock, I missed those flavors. I missed cookies
+              that didn't leave you thirsty, that you could eat two of without feeling heavy.
+              So I started baking them myself.
+            </p>
+            <p>
+              I trained as a pastry chef back in Russia, and I brought that education here — along
+              with a belief that organic ingredients and restraint in sweetness make for
+              a better cookie. I started sharing them with neighbors. Then neighbors started sharing
+              them with friends.
+            </p>
+            <p class="font-normal text-bark-800">
+              Now I bake for you. Small batches, organic ingredients, honest flavors — made with love
+              for our community here in Round Rock.
+            </p>
+          </div>
+          <div class="mt-10 pt-10 border-t border-cream-300">
+            <p class="font-serif text-2xl font-light italic text-bark-800">— Mioko</p>
+            <p class="text-xs tracking-widest2 uppercase text-earth-500 mt-1 font-medium">Pastry Chef & Baker</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ ───────────────────────────────────────────────────── -->
+    <section id="faq" class="bg-cream-100 py-24">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="mb-16 text-center">
+          <p class="text-xs tracking-widest2 uppercase text-earth-500 font-medium mb-4">Questions</p>
+          <h2 class="font-serif text-4xl md:text-5xl font-light text-bark-900">FAQ</h2>
+          <div class="mx-auto mt-5 w-12 h-px bg-earth-400"></div>
+        </div>
+
+        <dl class="space-y-0 divide-y divide-cream-300">
+          {faqs.map((faq) => (
+            <div class="py-7">
+              <dt class="font-serif text-xl font-medium text-bark-900 mb-3">{faq.q}</dt>
+              <dd class="text-bark-700 font-light leading-relaxed text-sm">{faq.a}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
+
+    <!-- ── CONTACT / FOOTER ──────────────────────────────────────── -->
+    <footer id="contact" class="bg-bark-900 text-cream-100 py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+
+          <!-- Brand -->
+          <div>
+            <p class="font-serif text-3xl font-light mb-3">Mioko</p>
+            <p class="text-cream-300 text-sm font-light leading-relaxed max-w-xs">
+              Handcrafted organic cookies.<br />
+              Round Rock, Texas.
+            </p>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <p class="text-xs tracking-widest2 uppercase text-earth-400 font-medium mb-5">Get in Touch</p>
+            <ul class="space-y-3 text-sm font-light text-cream-300">
+              <li>
+                <a href="mailto:hello@bakery.mioko.net"
+                   class="hover:text-cream-50 transition-colors">
+                  hello@bakery.mioko.net
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/YOUR_INSTAGRAM_HANDLE"
+                   target="_blank" rel="noopener noreferrer"
+                   class="hover:text-cream-50 transition-colors">
+                  @YOUR_INSTAGRAM_HANDLE
+                </a>
+              </li>
+              <li class="text-cream-300/60">Round Rock, TX 78664</li>
+            </ul>
+          </div>
+
+          <!-- Hours / Note -->
+          <div>
+            <p class="text-xs tracking-widest2 uppercase text-earth-400 font-medium mb-5">Ordering</p>
+            <ul class="space-y-2 text-sm font-light text-cream-300">
+              <li>Orders taken via Instagram DM or email</li>
+              <li>3–5 days advance notice</li>
+              <li>Local pickup only — Round Rock, TX</li>
+              <li class="pt-2 text-cream-300/60 text-xs">No online store. No delivery. Just good cookies.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Divider + legal -->
+        <div class="border-t border-cream-200/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p class="text-cream-300/50 text-xs font-light">
+            © {new Date().getFullYear()} Mioko Bakery. All rights reserved.
+          </p>
+          <p class="text-cream-300/40 text-xs font-light text-center">
+            Proudly serving the Round Rock community — organic, intentional, local.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+</Layout>
