@@ -3,34 +3,49 @@ import Layout from '../layouts/Layout.astro';
 
 const cookies = [
   {
-    name: "Cardamom & Rose Shortbread",
-    description: "Tender butter cookie with ground cardamom and dried rose petals. Barely sweet, deeply fragrant.",
-    image: "/images/cookie-cardamom-rose.jpg",
+    name: "Dark Chocolate Brookie",
+    description: "Brownie meets cookie — fudgy dark chocolate centre, crisp edge, barely sweet. Deeply satisfying.",
+    image: "/images/cookie-brooky-withe-dark-choco.jpg",
   },
   {
-    name: "Honey Walnut Rounds",
-    description: "Lightly sweetened with raw wildflower honey, packed with toasted walnuts. Rustic and warm.",
-    image: "/images/cookie-honey-walnut.jpg",
+    name: "Lemon & Cashew",
+    description: "Bright citrus zest against the buttery richness of roasted cashews. Fresh, light, and unexpected.",
+    image: "/images/cookie-lemon-cashew.jpg",
   },
   {
-    name: "Dark Chocolate Hazelnut",
-    description: "Intense 70% cacao with roasted hazelnuts. Rich, bittersweet, and satisfying without the sugar crash.",
-    image: "/images/cookie-choc-hazelnut.jpg",
+    name: "Chocolate Nutella",
+    description: "NY-style thick cookie with a molten Nutella centre and a deep cocoa crumb. A crowd favourite.",
+    image: "/images/cookie-ny-choco-nutella.jpg",
   },
   {
-    name: "Lemon Poppy Seed",
-    description: "Bright, zesty butter cookie with a tender crumb. Fresh lemon zest, a handful of poppy seeds.",
-    image: "/images/cookie-lemon-poppy.jpg",
+    name: "Lotus Biscoff",
+    description: "Swirls of Biscoff cookie butter through a soft, golden dough. Caramelised spice in every bite.",
+    image: "/images/cookie-ny-lotus-biscoff.jpg",
   },
   {
-    name: "Earl Grey & Lavender",
-    description: "Fragrant and floral, inspired by Russian afternoon tea. Subtle tannins, gentle sweetness.",
-    image: "/images/cookie-earl-grey.jpg",
+    name: "Oreo & White Chocolate",
+    description: "Crushed Oreo folded into a creamy white chocolate dough. Bold contrast, perfect balance.",
+    image: "/images/cookie-ny-oreo-white-choco.jpg",
   },
   {
-    name: "Buckwheat & Sea Salt",
-    description: "Earthy, nutty buckwheat flour with a finish of fleur de sel. Unexpected, unforgettable.",
-    image: "/images/cookie-buckwheat.jpg",
+    name: "Peanut Butter",
+    description: "Classic NY-style — thick, fudgy, and intensely nutty. Made with natural peanut butter, no shortcuts.",
+    image: "/images/cookie-ny-peanut-butter.jpg",
+  },
+  {
+    name: "Oats, Cranberry & Cinnamon",
+    description: "Wholesome rolled oats with tart dried cranberries and warm cinnamon. Rustic and hearty.",
+    image: "/images/cookie-oats-cranberry-cinnamon.jpg",
+  },
+  {
+    name: "Seasonal Assorted Box",
+    description: "A curated selection of the week's flavours — perfect for sharing or gifting. Contents vary by season.",
+    image: "/images/cookie-ny-assortie-box.jpg",
+  },
+  {
+    name: "Party Size Box",
+    description: "A large-format box for gatherings, events, or anyone who simply refuses to choose just one flavour.",
+    image: "/images/cookie-party-size-box.jpg",
   },
 ];
 
@@ -54,6 +69,30 @@ const faqs = [
   {
     q: "Can I request custom flavors or gift packaging?",
     a: "Absolutely. Custom seasonal flavors, curated gift boxes, and ribbon-wrapped tins are all available — just ask.",
+  },
+];
+
+const philosophy = [
+  { label: "Organic Ingredients", body: "Every batch starts with certified organic flour, butter, and eggs." },
+  { label: "Less Sweet, More Flavor", body: "Sugar lifts the other flavors — it doesn't drown them." },
+  { label: "Small Batch, Local", body: "Made in Round Rock, picked up in Round Rock. No shipping needed." },
+];
+
+const steps = [
+  {
+    step: "01",
+    title: "Browse the Collection",
+    body: "Explore the cookie flavors here. Seasonal availability changes weekly — check Instagram for the latest batch.",
+  },
+  {
+    step: "02",
+    title: "Send a Message",
+    body: "DM on Instagram or email directly. Share which flavors you'd like and how many. I'll confirm and give you a pickup window.",
+  },
+  {
+    step: "03",
+    title: "Local Pickup, Round Rock",
+    body: "Pick up your order fresh from my home bakery in Round Rock, TX. No delivery fees, no waiting on a courier.",
   },
 ];
 ---
@@ -91,20 +130,7 @@ const faqs = [
           src="/images/hero.jpg"
           alt="Handcrafted organic cookies arranged on a linen cloth"
           class="w-full h-full object-cover absolute inset-0"
-          onerror="this.style.display='none'"
         />
-        <!-- Placeholder shown when image not yet added -->
-        <div class="absolute inset-0 flex flex-col items-center justify-center bg-cream-200 text-bark-700 pointer-events-none select-none">
-          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="opacity-30 mb-3">
-            <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="22" cy="26" r="4" fill="currentColor" opacity=".4"/>
-            <circle cx="38" cy="22" r="3" fill="currentColor" opacity=".4"/>
-            <circle cx="42" cy="36" r="4" fill="currentColor" opacity=".4"/>
-            <circle cx="26" cy="40" r="3" fill="currentColor" opacity=".4"/>
-            <circle cx="34" cy="34" r="2" fill="currentColor" opacity=".3"/>
-          </svg>
-          <span class="text-xs tracking-widest2 uppercase opacity-40">hero.jpg — replace with your photo</span>
-        </div>
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-cream-50/60"></div>
       </div>
 
@@ -139,11 +165,7 @@ const faqs = [
     <section class="bg-cream-200 py-12">
       <div class="max-w-6xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          {[
-            { label: "Organic Ingredients", body: "Every batch starts with certified organic flour, butter, and eggs." },
-            { label: "Less Sweet, More Flavor", body: "Sugar lifts the other flavors — it doesn't drown them." },
-            { label: "Small Batch, Local",  body: "Made in Round Rock, picked up in Round Rock. No shipping needed." },
-          ].map(item => (
+          {philosophy.map(item => (
             <div class="py-4">
               <p class="text-xs tracking-widest2 uppercase text-earth-500 font-medium mb-2">{item.label}</p>
               <p class="text-bark-700 font-light leading-relaxed text-sm">{item.body}</p>
@@ -161,27 +183,15 @@ const faqs = [
         <div class="mx-auto mt-5 w-12 h-px bg-earth-400"></div>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
         {cookies.map((cookie) => (
           <article class="group">
-            <div class="relative aspect-square bg-cream-200 overflow-hidden mb-5">
+            <div class="relative aspect-[4/5] bg-cream-200 overflow-hidden mb-5">
               <img
                 src={cookie.image}
                 alt={cookie.name}
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                onerror="this.style.display='none'"
+                class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
               />
-              <!-- placeholder -->
-              <div class="absolute inset-0 flex flex-col items-center justify-center text-bark-700 pointer-events-none select-none">
-                <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="opacity-20 mb-2">
-                  <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="1.5"/>
-                  <circle cx="22" cy="26" r="4" fill="currentColor" opacity=".5"/>
-                  <circle cx="40" cy="22" r="3" fill="currentColor" opacity=".5"/>
-                  <circle cx="42" cy="38" r="4" fill="currentColor" opacity=".5"/>
-                  <circle cx="24" cy="40" r="3" fill="currentColor" opacity=".5"/>
-                </svg>
-                <span class="text-[10px] tracking-wider uppercase opacity-25">photo</span>
-              </div>
             </div>
             <h3 class="font-serif text-xl font-medium text-bark-900 mb-2">{cookie.name}</h3>
             <p class="text-bark-700 text-sm font-light leading-relaxed">{cookie.description}</p>
@@ -190,7 +200,7 @@ const faqs = [
       </div>
 
       <p class="text-center mt-14 text-bark-700 text-sm font-light">
-        Seasonal flavors rotate throughout the year.{" "}
+        Seasonal flavors rotate throughout the year.
         <a href="#contact" class="text-earth-500 underline underline-offset-4 hover:text-earth-600 transition-colors">
           Ask about what's available this week.
         </a>
@@ -210,23 +220,7 @@ const faqs = [
           <!-- Connector line (desktop only) -->
           <div class="hidden md:block absolute top-8 left-1/3 right-1/3 h-px bg-earth-400/40"></div>
 
-          {[
-            {
-              step: "01",
-              title: "Browse the Collection",
-              body: "Explore the cookie flavors here. Seasonal availability changes weekly — check Instagram for the latest batch.",
-            },
-            {
-              step: "02",
-              title: "Send a Message",
-              body: "DM on Instagram or email directly. Share which flavors you'd like and how many. I'll confirm and give you a pickup window.",
-            },
-            {
-              step: "03",
-              title: "Local Pickup, Round Rock",
-              body: "Pick up your order fresh from my home bakery in Round Rock, TX. No delivery fees, no waiting on a courier.",
-            },
-          ].map((item) => (
+          {steps.map((item) => (
             <div class="text-center flex flex-col items-center">
               <span class="font-serif text-4xl font-light text-earth-400 mb-5">{item.step}</span>
               <h3 class="font-serif text-xl font-medium text-bark-900 mb-3">{item.title}</h3>
@@ -247,16 +241,7 @@ const faqs = [
             src="/images/about.jpg"
             alt="Mioko baking in her kitchen"
             class="w-full h-full object-cover"
-            onerror="this.style.display='none'"
           />
-          <div class="absolute inset-0 flex flex-col items-center justify-center text-bark-700 pointer-events-none select-none">
-            <svg width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="opacity-20 mb-2">
-              <rect x="8" y="8" width="48" height="48" rx="2" stroke="currentColor" stroke-width="1.5"/>
-              <circle cx="32" cy="28" r="8" stroke="currentColor" stroke-width="1.5" opacity=".6"/>
-              <path d="M8 44 Q20 36 32 40 Q44 44 56 38" stroke="currentColor" stroke-width="1.5" fill="none" opacity=".4"/>
-            </svg>
-            <span class="text-[10px] tracking-wider uppercase opacity-25">about.jpg — replace with your photo</span>
-          </div>
         </div>
 
         <!-- Text -->
